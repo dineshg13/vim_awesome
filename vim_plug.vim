@@ -23,7 +23,6 @@ Plug 'dense-analysis/ale'
 Plug 'davidhalter/jedi-vim'
 Plug 'psf/black', { 'tag': '19.10b0' }
 
-
 " Initialize plugin system
 
 call plug#end()

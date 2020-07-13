@@ -99,9 +99,6 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale (syntax checker and linter)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_linters = {
-\   'javascript': ['jshint'],
-\}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
@@ -112,23 +109,34 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
-let g:ale_go_gometalinter_options = '
-  \ --aggregate
-  \ --fast
-  \ --sort=line
-  \ --vendor
-  \ --vendored-linters
-  \ --disable=gas
-  \ --disable=goconst
-  \ --disable=gocyclo
-  \ '
-let g:ale_linters = {'html': [], 'javascript': ['eslint'], 'go': ['gometalinter']}
+let g:ale_linters = {'html': [], 
+\ 'javascript': ['eslint'], 
+\ 'python': ['flake8'],
+\ 'go': ['go build', 'golint','errcheck']
+\   }
 let g:ale_set_highlights = 1
 let g:ale_set_signs = 1
 let g:ale_sign_column_always = 1
-let g:ale_sign_error = '⚠'
+let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '⚠'
 let g:ale_warn_about_trailing_whitespace = 1
+
+nmap <silent> <leader>a <Plug>(ale_next_wrap)
+
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+
+    return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+endfunction
+
+set statusline=%{LinterStatus()}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
@@ -141,7 +149,7 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " => Airline Theme 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:airline_theme='Oceanic'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -174,12 +182,25 @@ let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>r <Plug>(go-run)
+" au FileType go nmap <Leader>b <Plug>(go-build)
+au FileType go nmap <Leader>t <Plug>(go-test)
+au FileType go nmap gd <Leader>d <Plug>(go-def-tab)
+au FileType go nmap gr <Plug>(go-rename)
+au FileType go nmap gb <Plug>(go-doc-browser)
+au FileType go nmap gl :GoDeclsDir<CR>
+au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
+au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
+au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+au FileType go nmap <F12> <Plug>(go-def)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neovim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:python3_host_prog = '/Users/dinesh.gurumurthy/.local/share/nvim/black/bin/python'
+let g:python3_host_prog = '/Users/dinesh.gurumurthy/tools/python_venvs/default/bin/python'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
