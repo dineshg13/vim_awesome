@@ -80,7 +80,7 @@ endif
 set ruler
 
 "Show ruler at 100 character limit (change as needed)
-set colorcolumn=100
+set colorcolumn=0
 
 
 " Height of the command bar

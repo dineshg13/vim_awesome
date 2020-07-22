@@ -18,11 +18,13 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'amix/open_file_under_cursor.vim'
 Plug 'kien/ctrlp.vim'
-Plug 'tmhedberg/SimpylFold'
 Plug 'dense-analysis/ale'
 Plug 'davidhalter/jedi-vim'
 Plug 'psf/black', { 'tag': '19.10b0' }
-
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'rust-lang/rust.vim'
+Plug 'uarun/vim-protobuf'
 " Initialize plugin system
 
 call plug#end()

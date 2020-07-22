@@ -208,3 +208,9 @@ let g:python3_host_prog = '/Users/dinesh.gurumurthy/tools/python_venvs/default/b
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd BufWritePre *.py execute ':Black'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Material Theme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:material_theme_style = 'darker'
+
