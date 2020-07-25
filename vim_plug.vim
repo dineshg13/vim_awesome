@@ -25,7 +25,22 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'rust-lang/rust.vim'
 Plug 'uarun/vim-protobuf'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocompletion for go
+Plug 'majutsushi/tagbar'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/nvim-yarp'  " dependency of ncm2
+Plug 'ncm2/ncm2'
+" Fast python completion (use ncm2 if you want type info or snippet support)
+Plug 'HansPinckaers/ncm2-jedi'
+" Words in buffer completion
+Plug 'ncm2/ncm2-bufword'
+" Filepath completion
+Plug 'ncm2/ncm2-path'
+Plug 'tweekmonster/impsort.vim'  " color and sort imports
+Plug 'wsdjeg/FlyGrep.vim'  " awesome grep on the fly
+Plug 'tpope/vim-commentary'  "comment-out by gc
+
+
 
 
 " Initialize plugin system
