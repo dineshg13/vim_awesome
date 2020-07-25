@@ -25,6 +25,9 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'rust-lang/rust.vim'
 Plug 'uarun/vim-protobuf'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
 " Initialize plugin system
 
 call plug#end()
