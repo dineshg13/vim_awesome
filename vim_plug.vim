@@ -37,7 +37,6 @@ Plug 'ncm2/ncm2-bufword'
 " Filepath completion
 Plug 'ncm2/ncm2-path'
 Plug 'tweekmonster/impsort.vim'  " color and sort imports
-Plug 'wsdjeg/FlyGrep.vim'  " awesome grep on the fly
 Plug 'tpope/vim-commentary'  "comment-out by gc
 
 

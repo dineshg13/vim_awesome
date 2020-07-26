@@ -203,7 +203,7 @@ au FileType go nmap <F12> <Plug>(go-def)
 " => Neovim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:python3_host_prog = '/Users/dinesh.gurumurthy/tools/python_venvs/default/bin/python'
+let g:python3_host_prog = '/Users/dinesh.gurumurthy/tools/python_venvs/default/venv/bin/python'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -320,7 +320,3 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 
 
-" -------------------------------------------------------------------------------------------------
-" FlyGrep settings
-" -------------------------------------------------------------------------------------------------
-nnoremap <leader>s :FlyGrep<cr>
