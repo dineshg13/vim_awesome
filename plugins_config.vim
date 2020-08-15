@@ -3,7 +3,7 @@
 "       This requires that you install https://github.com/amix/vimrc !
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
@@ -50,7 +50,7 @@ let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 
-  
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,7 +89,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
-" Annotate strings with gettext 
+" Annotate strings with gettext
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
@@ -109,8 +109,8 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
-let g:ale_linters = {'html': [], 
-\ 'javascript': ['eslint'], 
+let g:ale_linters = {'html': [],
+\ 'javascript': ['eslint'],
 \ 'python': ['pylint'],
 \ 'go': ['go build', 'golint','errcheck']
 \   }
@@ -153,7 +153,7 @@ let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Airline Theme 
+" => Airline Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:airline_theme='onedark'
@@ -175,7 +175,7 @@ let g:airline#extensions#ale#enabled = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-go 
+" => Vim-go
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
@@ -350,8 +350,8 @@ Glaive codefmt plugin[mappings]
 Glaive codefmt google_java_executable="java -jar ~/tools/google-java-format-1.8-all-deps.jar"
 
 
-" -- 
+" --
 "  TagBar
 "
 "
-map <leader>g :TagbarToggle<cr>
+map <leader>tg :TagbarToggle<cr>
