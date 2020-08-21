@@ -46,6 +46,8 @@ Plug 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plug 'google/vim-glaive'
 Plug 'rakr/vim-one'
+Plug 'deoplete-plugins/deoplete-jedi'
+
 
 
 " Initialize plugin system
