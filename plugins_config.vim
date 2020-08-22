@@ -347,8 +347,7 @@ augroup END
 call glaive#Install()
 
 Glaive codefmt plugin[mappings]
-Glaive codefmt google_java_executable="java -jar ~/tools/google-java-format-1.8-all-deps.jar"
-
+Glaive codefmt google_java_executable=`expand('java -jar $HOME/tools/google-java-format-1.8-all-deps.jar')`
 
 " --
 "  TagBar
