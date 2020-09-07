@@ -210,7 +210,7 @@ au FileType go nmap <F12> <Plug>(go-def)
 " => Neovim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:python3_host_prog = '/Users/dinesh.gurumurthy/tools/python_venvs/default/venv/bin/python'
+let g:python3_host_prog = '$HOME/tools/python_venvs/default/venv/bin/python'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

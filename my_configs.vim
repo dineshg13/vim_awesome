@@ -17,4 +17,7 @@ silent! helptags ALL
 set tags=tags
 autocmd BufWritePost *.py silent! !ctags -R --python-kinds=-i --languages=python 2&gt; /dev/null &amp;
 
+set clipboard+=unnamedplus
+
+
 " highlight LineNr ctermfg=yellow
